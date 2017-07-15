@@ -20,8 +20,8 @@ def memoized(n):
 	elif n==2:
 		return memo[1]
 	else:
-		#if memo[n-1] < 0:
-		memo[n-1] = memoized(n-1) + memoized(n-2)
+		if memo[n-1] < 0:
+			memo[n-1] = memoized(n-1) + memoized(n-2)
 		return memo[n-1]
 
 """def memoized(n):
